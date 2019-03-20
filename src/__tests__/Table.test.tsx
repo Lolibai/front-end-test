@@ -3,7 +3,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { render } from 'react-testing-library';
 import 'react-testing-library/cleanup-after-each';
-import Table from '../components/Table';
+import { Table } from '../components/Table';
 import data100 from '../data/report_100.json';
 
 Enzyme.configure({ adapter: new Adapter() })
