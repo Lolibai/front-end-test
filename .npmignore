@@ -1,0 +1,9 @@
+config
+dist
+node_modules
+public
+scripts
+src
+.gitignore
+tsconfig.json
+yarn.lock

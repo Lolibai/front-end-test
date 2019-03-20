@@ -7,7 +7,7 @@ import SearchField from '../SearchField';
 import TBody from '../TBody';
 import THead from '../THead';
 
-class Table extends Component<TableProps> {
+export class Table extends Component<TableProps> {
   state: TableState
   constructor(props: TableProps) {
     super(props)
@@ -128,6 +128,7 @@ class Table extends Component<TableProps> {
     return (
       <div className="table_main_view">
         <div>
+          <Legend columns={columns} handleToggleColumn={handleToggleColumn} />
           <SearchField search={search} handleSearch={handleSearch} />
           <table>
             <THead
@@ -139,10 +140,7 @@ class Table extends Component<TableProps> {
             <TBody data={newData} columns={columns} search={search} />
           </table>
         </div>
-        <Legend columns={columns} handleToggleColumn={handleToggleColumn} />
       </div>
     )
   }
 }
-
-export default Table
