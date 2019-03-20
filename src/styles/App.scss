@@ -1,0 +1,29 @@
+h1 {
+  color: #ffc107;
+  text-align: center;
+}
+#root {
+  height: 100%;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.selected {
+  background-color: #2196f3 !important;
+  border-radius: 5px !important;
+  .list-item-icon {
+    color: #fff;
+  }
+  .list-item-text {
+    span {
+      color: #fff;
+    }
+  }
+}
+
+.main_container {
+  height: calc(100vh - 64px);
+}
