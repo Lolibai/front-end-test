@@ -2,6 +2,7 @@
   "name": "front-end-task",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.js",
   "dependencies": {
     "@types/jest": "24.0.11",
     "@types/node": "11.11.3",
@@ -14,7 +15,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf build/ dist/ && npm run build:react && npm run build:bundle && rm -rf build/",
+    "build:react": "react-scripts build",
+    "build:bundle": "webpack --mode production --config webpack.lib.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -33,6 +36,8 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "node-sass": "^4.11.0",
-    "react-testing-library": "^6.0.0"
+    "react-testing-library": "^6.0.0",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack-cli": "^3.3.0"
   }
 }
